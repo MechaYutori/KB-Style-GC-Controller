@@ -144,7 +144,7 @@ uint8_t gc_write(const uint8_t pin, Gamecube_Status_t *status, Gamecube_Origin_t
     uint8_t command[3];
     uint8_t receivedBytes = gc_n64_get(command, sizeof(command), modePort, outPort, inPort, bitMask);
 
-    // add key reading code here, there are around 70us room.
+    // add key reading code here, it only has about 70us room.
     keybind(report);
 
     // Init or reset
